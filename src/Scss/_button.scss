@@ -1,0 +1,44 @@
+button {
+    background: var(--clear);
+    border-radius: 4px;
+    border: 1px solid var(--medium);
+    color: var(--color-text);
+    font-size: 1em;
+    height: 40px;
+    margin: 0 5px;
+    padding: 5px 15px;
+
+    &.primary {
+        color: var(--primary-text);
+        background: var(--primary-bg);
+        border: 1px solid var(--primary-border); 
+
+        &.inline {
+            color: var(--primary-bg);
+        }
+    }
+
+    &.secondary {
+        color: var(--secondary-text);
+        background: var(--secondary-bg);
+        border: 1px solid var(--secondary-border); 
+
+        &.inline {
+            color: var(--secondary-bg);
+        }
+    }
+
+    &.full {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    &.inline {
+        background: transparent;
+        border: 0;
+        height: auto;
+        margin: 0 3px;
+        padding: 0;
+    }
+}

@@ -1,0 +1,53 @@
+.container {
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 100%;
+
+    @include medium {
+        max-width: 960px;
+    }
+}
+
+.grid {
+    display: grid;
+
+    &--gap {
+        @include small {
+            grid-gap: 15px;
+        }
+    }
+
+    &--columns {
+        @include small {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include medium {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+.content {
+    margin-bottom: 30px;
+}
+
+table {
+    border-collapse:collapse;
+    border-left: 1px solid var(--medium);
+    border-top: 1px solid var(--medium);
+
+    tr {
+        border-collapse:collapse;
+        margin: 0;
+        padding: 0;
+
+        td, th {
+            border-bottom: 1px solid var(--medium);
+            border-collapse:collapse;
+            border-right: 1px solid var(--medium);
+            padding: 5px 15px;
+        }
+    }
+
+}

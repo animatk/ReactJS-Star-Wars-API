@@ -1,0 +1,30 @@
+.form {
+    &-container {
+        margin-bottom: 20px;
+
+        label {
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        &.error {
+            color: var(--error-bg);
+        }
+    }
+
+    &-field {
+        background: var(--clear);
+        border-radius: 6px;
+        border: 1px solid var(--medium);
+        box-sizing: border-box;
+        font-size: 1rem;
+        height: 40px;
+        padding: 5px 15px;
+        width: 100%;
+
+        .error & {
+            border-color: var(--error-bg);
+            color: var(--error-bg);
+        }
+    }
+}
