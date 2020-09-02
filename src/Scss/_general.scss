@@ -51,3 +51,48 @@ table {
     }
 
 }
+
+h1, h2, h3, h4 {
+    color: var(--warning-bg);
+}
+
+.vertical-list {
+    li {
+        background-color: var(--dark);
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        cursor: pointer;
+        list-style: none;
+        min-height: 200px;
+        position: relative;
+        transition: background .2s;
+
+        .desc {
+            background-image: linear-gradient(0deg, black, transparent);
+            bottom: 0;
+            color: white;
+            display: block;
+            padding: 10px 15px;
+            position: absolute;
+            text-decoration: none;
+            width: 100%;
+
+            p {
+                display: none;
+            }
+        }
+
+        &:hover {
+            background-size: 120%;
+
+            .desc {
+                background-image: linear-gradient(0deg, black, rgba(0,0,0,.5));
+
+                p {
+                    display: block;
+                }
+            }
+        }
+    }
+}
