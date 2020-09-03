@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
-export default function Peoplelist() {
+const Peoplelist = ({
+  setCharacter,
+}) => {
   const [people, setPeople] = useState([])
   const imgURL = 'https://starwars-visualguide.com/assets/img/characters/'
 
@@ -22,18 +25,26 @@ export default function Peoplelist() {
     <ul className="">
       {people.map((person) => (
         <li>
-          <div
-            className="img"
-            key={person.name}
-            style={
-          { backgroundImage: `url(${imgURL + getId(person.url)}.jpg)` }
-          }
-          />
-          <div className="desc">
-            <h3>{person.name}</h3>
-          </div>
+          <a href={`#${person.name}`} onClick={() => setCharacter(getId(person.url))} role="button">
+            <div
+              className="img"
+              key={person.name}
+              style={
+            { backgroundImage: `url(${imgURL + getId(person.url)}.jpg)` }
+            }
+            />
+            <div className="desc">
+              <h3>{person.name}</h3>
+            </div>
+          </a>
         </li>
       ))}
     </ul>
   )
 }
+
+Peoplelist.propTypes = {
+  setCharacter: PropTypes.func.isRequired,
+}
+
+export default Peoplelist
