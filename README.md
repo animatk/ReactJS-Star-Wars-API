@@ -1,4 +1,4 @@
-# ReactJS Start Wars API
+# ReactJS Star Wars API
 
 This is a ReactJS web App that provides REST info about Star Wars characters and planets.
 
