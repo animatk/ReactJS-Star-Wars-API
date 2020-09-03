@@ -17,7 +17,7 @@ export default function App() {
       { peopleId || planetId
         ? (
           <>
-            <button className="button primary inline" onClick={() => { setCharacter(null); setCharacter(null) }} type="button">
+            <button className="button primary inline" onClick={() => { setCharacter(null); setPlanet(null) }} type="button">
               &lsaquo; Return to Main
             </button>
             <p>People or Planet Details</p>

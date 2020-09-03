@@ -130,7 +130,7 @@ h1, h2, h3, h4 {
             text-decoration: none;
             width: 100%;
 
-            p {
+            p, a {
                 display: none;
             }
         }
@@ -141,7 +141,7 @@ h1, h2, h3, h4 {
             .desc {
                 background-image: linear-gradient(0deg, black, rgba(0,0,0,.5));
 
-                p {
+                p, a {
                     display: block;
                 }
             }

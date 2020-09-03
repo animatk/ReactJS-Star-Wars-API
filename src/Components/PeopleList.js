@@ -24,11 +24,10 @@ const Peoplelist = ({
   return (
     <ul className="">
       {people.map((person) => (
-        <li>
-          <a href={`#${person.name}`} onClick={() => setCharacter(getId(person.url))} role="button">
+        <li key={person.name}>
+          <a href={`#person/${person.name}`} onClick={() => setCharacter(getId(person.url))} role="button">
             <div
               className="img"
-              key={person.name}
               style={
             { backgroundImage: `url(${imgURL + getId(person.url)}.jpg)` }
             }

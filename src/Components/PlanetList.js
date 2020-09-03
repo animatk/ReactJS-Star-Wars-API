@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import PropTypes from 'prop-types'
 
-export default function Planetlist() {
+const Planetlist = ({
+  setPlanet,
+}) => {
   const [planets, setPlanets] = useState([])
   const imgURL = 'https://starwars-visualguide.com/assets/img/planets/'
 
@@ -31,9 +34,18 @@ export default function Planetlist() {
             <h3>{planet.name}</h3>
             <p>{`Diameter: ${planet.diameter}`}</p>
             <p>{planet.terrain}</p>
+            <a href={`#planets/${planet.name}`} onClick={() => setPlanet(getId(planet.url))} role="button">
+              More details &raquo;
+            </a>
           </div>
         </li>
       ))}
     </ul>
   )
 }
+
+Planetlist.propTypes = {
+  setPlanet: PropTypes.func.isRequired,
+}
+
+export default Planetlist
