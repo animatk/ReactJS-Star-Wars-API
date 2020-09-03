@@ -54,9 +54,61 @@ table {
 
 h1, h2, h3, h4 {
     color: var(--warning-bg);
+    padding-bottom: .8rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.horizontal-list {
+    ul {
+        overflow: auto;
+        padding: 0;
+        white-space: nowrap;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+        padding: 0 10px;
+        text-align: center;
+        width: 100px;
+
+        @include large {
+            width: 150px;
+        }
+
+        .img {
+            background-color: var(--dark);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            cursor: pointer;
+            border-radius: 50%;
+            padding-top: 100%;
+            transition: background .2s;
+
+           &:hover {
+               background-size: 110%;
+           }
+        }
+
+        .desc {
+            padding: 5px 0;
+
+            h3 {
+                font-size: .8rem;
+            }
+        }
+    }
 }
 
 .vertical-list {
+    ul {
+        padding: 0;
+    }
+
     li {
         background-color: var(--dark);
         background-position: center top;

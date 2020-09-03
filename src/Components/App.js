@@ -2,16 +2,17 @@ import React, { memo } from 'react'
 
 // Components
 import PlanetsList from './PlanetList'
+import PeopleList from './PeopleList'
 
 // css
 import '../Scss/index.scss'
 
 const App = memo(() => (
   <div className="container">
-    <h1>Star Wars</h1>
+    <h1 className="text-center">Star Wars API</h1>
     <h2>People</h2>
     <div className="horizontal-list">
-      <p>People Items</p>
+      <PeopleList />
     </div>
     <h2>Planets</h2>
     <div className="vertical-list">
